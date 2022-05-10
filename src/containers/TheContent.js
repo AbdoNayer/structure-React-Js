@@ -1,11 +1,10 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 
 // routes config
 import routes from '../routes'
-import Loading from '../components/loader'
-import ErrorPage from "../pages/ErrorPage";
+import Loading from '../components/loader';
 
 const loading = (
   <Loading />
@@ -13,32 +12,22 @@ const loading = (
 
 const TheContent = () => {
   return (
-    <Suspense fallback={loading}>
-          <Router>
-              <Routes>
-                <Route
-                  path="*"
-                  element={ <ErrorPage /> }
-                />
-                {
-                  routes.map((route, i) => {
-                    console.log('route -------', route)
-                    return (
-                      <Route
-                        key={i}
-                        path={route.path}
-                        exact={route.exact}
-                        name={route.name}
-                        element={props => (
-                          <route.component {...props} />
-                        )}
-                      />
-                    );
-                  })
-                }
-              </Routes>
-        </Router>
-    </Suspense>
+    <React.Suspense fallback={loading}>
+        <Routes>
+            {
+              routes.map((route, i) => {
+                return (
+                  <Route
+                    key={i}
+                    path={route.path}
+                    name={route.name}
+                    element={ <route.component /> }
+                  />
+                );
+              })
+          }
+        </Routes>
+    </React.Suspense>
     
   )
 }

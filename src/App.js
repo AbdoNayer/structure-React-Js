@@ -1,17 +1,15 @@
-import React, { Component, Suspense } from "react";
+import React from "react";
 
 // Containers
 const TheLayout = React.lazy(() => import("./containers/TheLayout"));
 
-class App extends Component {
+function App() {
 
-  render() {
-    return (
-      <Suspense>
-        <TheLayout />
-      </Suspense>
-    );
-  }
+  return (
+    <>
+      <TheLayout />
+    </>
+  );
 
 }
 

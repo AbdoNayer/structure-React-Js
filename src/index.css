@@ -109,3 +109,7 @@ a, button, img{
   font-size: 30px;
   display: inline-block;
 }
+
+.active{
+  color: #E5A29A;
+}

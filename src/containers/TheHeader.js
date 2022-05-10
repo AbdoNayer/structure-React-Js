@@ -1,17 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
-const TheHeader = (props) => {
+const TheHeader = () => {
   return (
-    <div className={''}>
-          <h1>Header</h1>
-          <Router>
-            <Link className="color" to='/home'>home</Link>
-            <Link className="color" to='/about'>About</Link>
-            <Link className="color" to='/profile'>Profile</Link>
-          </Router>
-    </div>
+    <nav>
+      <NavLink className="color" to='/'>home</NavLink>
+      <NavLink className="color" to='about'>About</NavLink>
+      <NavLink className="color" to='profile'>Profile</NavLink>
+    </nav>
   );
 };
 

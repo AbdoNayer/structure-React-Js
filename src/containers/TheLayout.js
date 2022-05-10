@@ -4,10 +4,10 @@ import { TheContent, TheFooter, TheHeader, TheSideBar } from './index';
 const TheLayout = () => {
     return (
         <>
-          <TheSideBar/>
+          <TheSideBar />
           <TheHeader />
-          <TheContent/>
-          <TheFooter/>
+          <TheContent />
+          <TheFooter />
         </>
     )
 }

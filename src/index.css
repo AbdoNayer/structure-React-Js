@@ -1,56 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;700&display=swap");
 /* Root Style */
-
 :root {
-  --mainColor           : #E5A29A;
-  --Secondcolor         : #363636;
-  --whiteColor          : #fff;
-  --redColor            : #f00;
-  --yellowColor         : #FEC106;
-  --grayColor           : #565960;
+  --mainColor: #E5A29A;
+  --Secondcolor: #363636;
+  --whiteColor: #fff;
+  --redColor: #f00;
+  --yellowColor: #FEC106;
+  --grayColor: #565960;
 }
 
 /* Basic Style App */
-
-*{
-    margin: 0;
-    padding: 0;
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
 body {
-    min-width: 320px;
-    overflow-x: hidden;
-    background-color: #fff;
-    font-family: 'Radio Canada', sans-serif;
-    line-height: 1.6em;
-    position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: 'Radio Canada', sans-serif;
+  line-height: 1.6em;
+  position: relative;
 }
 
-a, button, img{
-    transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
+a, button, img {
+  transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
 }
 
 /* Loading App */
-
-.loader{
+.loader {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: var(--white);
   z-index: 99999;
 }
 
-.loading{
+.loading {
   position: relative;
   top: -50px;
 }
@@ -61,48 +63,79 @@ a, button, img{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  animation: speed 2s infinite ease-in-out;
+  -webkit-animation: speed 2s infinite ease-in-out;
+          animation: speed 2s infinite ease-in-out;
 }
 
 .loading span:nth-child(1) {
   background: var(--mainColor);
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .loading span:nth-child(2) {
   background: var(--Secondcolor);
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .loading span:nth-child(3) {
   background: var(--yellowColor);
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .loading span:nth-child(4) {
   background: var(--redColor);
 }
 
-@keyframes speed {
+@-webkit-keyframes speed {
   0% {
-    transform: translate(0%);
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
     border-radius: 50%;
   }
   25% {
-    transform: translate(150%) scale(0.5);
+    -webkit-transform: translate(150%) scale(0.5);
+            transform: translate(150%) scale(0.5);
     border-radius: 0%;
   }
-
   50% {
-    transform: translate(150%, 150%);
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
     border-radius: 50%;
   }
   75% {
-    transform: translate(0, 150%) scale(0.5);
+    -webkit-transform: translate(0, 150%) scale(0.5);
+            transform: translate(0, 150%) scale(0.5);
     border-radius: 0%;
   }
-} 
-.color{
+}
+
+@keyframes speed {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    border-radius: 50%;
+  }
+  25% {
+    -webkit-transform: translate(150%) scale(0.5);
+            transform: translate(150%) scale(0.5);
+    border-radius: 0%;
+  }
+  50% {
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
+    border-radius: 50%;
+  }
+  75% {
+    -webkit-transform: translate(0, 150%) scale(0.5);
+            transform: translate(0, 150%) scale(0.5);
+    border-radius: 0%;
+  }
+}
+
+.color {
   color: #F00;
   text-decoration: none;
   margin: 10px;
@@ -110,6 +143,7 @@ a, button, img{
   display: inline-block;
 }
 
-.active{
+.active {
   color: #E5A29A;
 }
+/*# sourceMappingURL=index.css.map */

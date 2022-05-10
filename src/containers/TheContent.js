@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-
 // routes config
 import routes from '../routes'
 import Loading from '../components/loader';
